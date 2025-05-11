@@ -1,22 +1,24 @@
-var canvasWidth = 800;
-var canvasHeight = 600;
-var size = 3;
+var size = 1;
 var grid;
 
 function setup() {
-  createCanvas(canvasWidth, canvasHeight);
-  background(255, 255, 255);
-  grid = new Grid(canvasWidth / size, canvasHeight / size, size);
+  createCanvas(windowWidth, windowHeight);
+
+  grid = new Grid(windowWidth, windowHeight, size);
   //grid.drawGrid();
 }
 
 function draw() {
+  background(255, 255, 255);
   grid.update();
 
   let fps = frameRate();
-  console.log(fps);
+  fill('black');
+  text(fps, 50, 50);
 } 
 
 function mouseDragged() {
-  grid.addCell(round(mouseX / size), round(mouseY / size));
+  let x = Math.round(mouseX / size) * size;
+  let y = Math.round(mouseY / size) * size;
+  grid.addParticle(x, y);
 }
