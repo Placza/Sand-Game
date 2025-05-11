@@ -1,24 +1,22 @@
 var size = 1;
 var grid;
+var font;
+var fps;
+let myShader;
+
+function preload() {
+  font = loadFont('assets/Inconsolata.otf');
+  myShader = loadShader('sand.vert', 'sand.frag');
+}
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-
-  grid = new Grid(windowWidth, windowHeight, size);
-  //grid.drawGrid();
+  createCanvas(windowWidth, windowHeight, WEBGL);
+  noStroke();
 }
 
 function draw() {
   background(255, 255, 255);
-  grid.update();
+  shader(myShader);  
+  rect(0, 0, 20, 20);
+}
 
-  if (mouseIsPressed === true) {
-    let x = Math.round(mouseX / size) * size;
-    let y = Math.round(mouseY / size) * size;
-    grid.addParticle(x, y);
-  }
-
-  let fps = frameRate();
-  fill('black');
-  text(fps, 50, 50);
-} 
