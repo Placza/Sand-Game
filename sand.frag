@@ -1,16 +1,24 @@
-#ifdef GL_ES
+precision highp float;
 
-precision mediump float;
+varying vec2 pos;
 
-#endif
+uniform float mouseCoordX;
+uniform float mouseCoordY;
+uniform float size;
+uniform sampler2D prevFrame;
 
 
 void main() {
+    vec4 current = texture2D(prevFrame, pos);
 
-    // Make a blue color. In shaders, the RGB color goes from 0 - 1 instead of 0 - 255
+    vec3 circle = vec3(mouseCoordX, mouseCoordY, size);
+    float d = length(pos - circle.xy);
+    
+    if (d < size) {
+        current = vec4(0., 0., 0., 1.);
+    }
+    
 
-    vec3 color = vec3(0.0, 0.0, 1.0);
 
-    gl_FragColor = vec4(color, 1.0);
-
+    gl_FragColor = current;
 }
