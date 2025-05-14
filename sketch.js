@@ -31,6 +31,8 @@ function draw() {
   shader(myShader);
   myShader.setUniform('mouseCoordX', x);
   myShader.setUniform('mouseCoordY', y);
+  myShader.setUniform('pixelSizeX', 1 / width);
+  myShader.setUniform('pixelSizeY', 1 / height);
   myShader.setUniform('size', size);
   myShader.setUniform('prevFrame', prev.color);
   rect(0, 0, width, height);
