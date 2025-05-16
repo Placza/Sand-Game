@@ -1,0 +1,135 @@
+body {
+    background-color: #f0ebe3;
+    font-family: Arial, Helvetica, sans-serif   
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style-type: none;
+}
+
+a {
+    color: rgb(202, 139, 66);
+    text-decoration: none;
+    font-weight: normal;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+main {
+    font-size: small;
+     background-color: rgb(223, 222, 222, 0.4);
+     margin: 50px;
+     padding: 20px;
+     border-radius: 20px;
+}
+
+section {
+    margin-bottom: 60px;
+}
+
+main section header{
+    font-size: large;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+section div {
+    font-size: medium;
+}
+
+#about div {
+    margin-left: 30px;
+}
+
+#cellular_automata {
+    text-align: right;
+}
+
+#cellular_automata  div {
+    text-align: left;
+    margin-right: 30px;
+}
+
+footer {
+     background-color: pink;
+}
+
+aside {
+    font-family:'Courier New', Courier, monospace;
+}
+
+#small {
+    position: fixed;
+    top: 46%;
+    left: 20px;
+    font-size: 20px;
+    opacity: 20%;
+    transition: 200ms;
+}
+
+#small:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+#small:hover .tooltip {
+    visibility: visible;
+    font-size: small;
+}
+
+#medium {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    font-size: 30px;
+    opacity: 20%;
+}
+
+#medium:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+#medium:hover .tooltip {
+    visibility: visible;
+    font-size: medium;
+}
+
+#large {
+    position: fixed;
+    top: 54%;
+    left: 20px;
+    font-size: 40px;
+    opacity: 20%;
+}
+
+#large:hover {
+    cursor: pointer;
+    opacity: 100%;
+}
+
+#large:hover .tooltip {
+    visibility: visible;
+    font-size: large;
+}
+
+.tooltip {
+    position: fixed;
+    top: 50%;
+    left: 50px;
+    background-color: rgb(77, 77, 77);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    visibility: hidden;
+    font-size: small;
+}
+
+#noita {
+    display: block;
+}
