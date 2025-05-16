@@ -1,34 +1,17 @@
 let titles = Array.from(document.getElementsByClassName("title"));
 let texts = Array.from(document.getElementsByClassName("text"));
+let body = document.getElementById("body");
 
 function sizeSmall() {
-    titles.forEach(title => {
-        title.style.fontSize = "larger";
-    });
-
-    texts.forEach(text => {
-        text.style.fontSize = "small";
-    });
+    body.style.fontSize = "small";
 }
 
 function sizeMedium() {
-    titles.forEach(title => {
-        title.style.fontSize = "large";
-    });
-
-    texts.forEach(text => {
-        text.style.fontSize = "medium";
-    });
+    body.style.fontSize = "medium";
 }
 
 function sizeLarge() {
-    titles.forEach(title => {
-        title.style.fontSize = "35px";
-    });
-
-    texts.forEach(text => {
-        text.style.fontSize = "large";
-    });
+    body.style.fontSize = "large";
 }
 
 

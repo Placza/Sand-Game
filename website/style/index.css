@@ -1,135 +1,140 @@
+/*----------BODY------------*/
+
 body {
-    background-color: #f0ebe3;
-    font-family: Arial, Helvetica, sans-serif   
-}
-
-nav ul {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    list-style-type: none;
-}
-
-a {
-    color: rgb(202, 139, 66);
-    text-decoration: none;
-    font-weight: normal;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-main {
-    font-size: small;
-     background-color: rgb(223, 222, 222, 0.4);
-     margin: 50px;
-     padding: 20px;
-     border-radius: 20px;
-}
-
-section {
-    margin-bottom: 60px;
-}
-
-main section header{
-    font-size: large;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-section div {
+    background-color: rgb(238, 229, 216);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: medium;
 }
 
-#about div {
-    margin-left: 30px;
+/*----------NAVIGATION------------*/
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    list-style: none;
 }
 
-#cellular_automata {
+/*-------------MAIN---------------*/
+
+.main {
+    background-color: rgb(192, 192, 192, 0.4);
+    padding: 50px;
+    margin-top: 20px;
+    margin-right: 60px;
+    margin-left: 60px;
+    border-radius: 30px;
+    box-shadow: 12px 12px 12px 3px rgba(82, 43, 11, 0.4);
+}
+
+.section {
+    margin-bottom: 5em;
+}
+
+.section:nth-child(even) .title{
     text-align: right;
 }
 
-#cellular_automata  div {
-    text-align: left;
-    margin-right: 30px;
+.section:nth-child(even) .text {
+    margin-right: 3em;
 }
 
-footer {
-     background-color: pink;
+.section:nth-child(odd) .text {
+    margin-left: 3em;
 }
 
-aside {
-    font-family:'Courier New', Courier, monospace;
+.title {
+    margin-bottom: 2rem;
+    font-size: 2em;
+}
+
+.text {
+    font-size: 1em;
+}
+
+/*---------------ASIDE-------------*/
+
+.font-size {
+    position: fixed;
+    opacity: 20%;
+    left: 20px;
+}
+
+.font-size:hover {
+    opacity: 100%;
+    cursor: pointer;
+}
+
+.font-tooltip {
+    display: none;
+    position: absolute;
+    top: -20%;
+    left: 40px;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 0.6em;
+}
+
+.font-size:hover .font-tooltip {
+    display: block;
 }
 
 #small {
-    position: fixed;
     top: 46%;
-    left: 20px;
     font-size: 20px;
-    opacity: 20%;
-    transition: 200ms;
-}
-
-#small:hover {
-    cursor: pointer;
-    opacity: 100%;
-}
-
-#small:hover .tooltip {
-    visibility: visible;
-    font-size: small;
 }
 
 #medium {
-    position: fixed;
     top: 50%;
-    left: 20px;
     font-size: 30px;
-    opacity: 20%;
-}
-
-#medium:hover {
-    cursor: pointer;
-    opacity: 100%;
-}
-
-#medium:hover .tooltip {
-    visibility: visible;
-    font-size: medium;
 }
 
 #large {
-    position: fixed;
-    top: 54%;
-    left: 20px;
+    top: 55%;
     font-size: 40px;
-    opacity: 20%;
 }
 
-#large:hover {
-    cursor: pointer;
-    opacity: 100%;
+/*--------------GLOBAL-------------*/
+
+a {
+    text-decoration: none;
+    color: rgb(131, 115, 25);
 }
 
-#large:hover .tooltip {
-    visibility: visible;
-    font-size: large;
+/*---------------TOOLTIP--------------*/
+
+.tooltip-container {
+    display: inline-block;
+    position: relative;
 }
 
 .tooltip {
-    position: fixed;
-    top: 50%;
-    left: 50px;
-    background-color: rgb(77, 77, 77);
+    position: absolute;
+    background-color: rgb(56, 55, 55);
     color: white;
-    padding: 5px;
+    width: 400px;
+    display: none;
+    padding: 15px;
     border-radius: 10px;
-    visibility: hidden;
-    font-size: small;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.5);
 }
 
-#noita {
+.tooltip-container:hover .tooltip {
     display: block;
+}
+
+.tooltip-image img {
+    width: 100%;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px black;
+}
+
+.tooltip-info {
+    background-color: rgb(78, 78, 76);
+    border-radius: 5px;
+    text-align: left;
+    padding: 10px;
 }

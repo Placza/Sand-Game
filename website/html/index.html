@@ -4,48 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="../style/index.css">
 </head>
-<body>
+<body id="body">
     <header>
         <div id="banner"></div>
     </header>
     <nav>
-        <ul>
+        <ul class="navigation">
             <li><a href="">My journey</a></li>
             <li><a href="">Tutorial</a></li>
             <li><a href="">Gallery</a></li>
         </ul>
     </nav>
     <aside>
-        <div id="small">
+        <div class ="font-size" id="small">
             a
-            <div class="tooltip">
+            <div class="font-tooltip">
                 Small font
             </div>
         </div>
         
-        <div id="medium">
+        <div class ="font-size" id="medium">
             a
-            <div class="tooltip">
+            <div class="font-tooltip">
                 Medium font
             </div>
         </div>
-        <div id="large">
+        <div class="font-size" id="large">
             a
-            <div class="tooltip">
+            <div class="font-tooltip">
                 Large font
             </div>
         </div>
     </aside>
-    <main>
-        <section id="about">
+    <main class="main">
+        <section class="section">
             <header class="title">
                 About Sand o' Plenty
             </header>
             <div class="text">
                 Sand o' Plenty is shader-based game inspired
-                after the popular <a href="#cellular_automata">cellular automata </a> genre of games.
+                after the popular cellular automata genre of games.
                 I was heavily to inpsired to try coding such a game after watching
                 <a href="https://www.youtube.com/watch?v=L4u7Zy_b868">The Code Train's vide</a> on the same topic.
                 I was up for the challenge and wanted to create a
@@ -63,7 +63,7 @@
                 so is also on the GitHub page.
             </div>
         </section>
-        <section id="cellular_automata">
+        <section class="section">
             <header class="title">
                 Cellular automata
             </header>
@@ -77,7 +77,26 @@
                 studies. They can be used to simulate various dynamic systems and 
                 algorithms. However, it is not a rare thing for cellular automata to be 
                 used in more artistic or gamedev circles. You probably have heard of
-                , a popular Steam release game that utilises 
+                <div class="tooltip-container">
+                    <a href="">Noita</a>,
+                    <div class="tooltip">
+                        <div class="tooltip-image">
+                            <img src="../images/noita.gif" alt="">
+                        </div>
+                        <div class="tooltip-info">
+                            <b>About Noita:</b> <br>
+                            Noita, develloped and published by Nolla Games, is a plarfotm roguelike
+                            that heavily utilises the concept the concept of every pixel being
+                            a particle that is affected by physics. Noita, like many other falling
+                            sand games, is based on cellular automata in which every cell acts
+                            as an independent object that can determine in which state it should
+                            be in every given moment. Just like Sand o' Plenty, it uses the processing
+                            power of the GPU to render such a complex world and is, because of that, partially another
+                            inspiration for this project.
+                        </div>
+                    </div>
+                </div>
+                 a popular Steam release game that utilises 
                 the concept of cellular automata in a way where every pixel of the game
                 is affected by physics. Alongside Noita, you probably have also heard
                 of <a href="">Conway's game of life</a> created by the British mathematician
@@ -91,5 +110,5 @@
     </main>
     <footer></footer>
 </body>
-<script src="script/font.js"></script>
+<script src="../script/font.js"></script>
 </html>
